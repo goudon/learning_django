@@ -13,6 +13,16 @@ $ python manage.py runserver
 
 # 3. add app
 $ python manage.py startapp polls
+
+# 4. add urls
+
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('polls/', include('polls.urls')),
+    path('admin/', admin.site.urls),
+]
 ```
 
 ## setting databases
